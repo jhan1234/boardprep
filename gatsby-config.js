@@ -3,5 +3,15 @@ module.exports = {
     title: `boardprep`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `preop`,
+        path: `${__dirname}/preop`,
+      }
+    },
+  ],
 }
